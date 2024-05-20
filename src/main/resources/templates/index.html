@@ -4,21 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todoアプリ</title>
-    <link rel="stylesheet" href="style.css">
+    <title>研修感想フォーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .reset-button {
+            background-color: #ccc;
+            color: #666;
+        }
+
+        .notes {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Todoリスト</h1>
+    <div class="container">
+        <h1>研修感想フォーム</h1>
 
-    <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="タスクを入力">
-        <button type="submit">追加</button>
-    </form>
+        <form action="#">
+            <div class="form-group">
+                <label for="lecturer">講師名：</label>
+                <input type="text" id="lecturer" name="lecturer" required>
+            </div>
 
-    <ul id="todo-list"></ul>
+            <div class="form-group">
+                <label for="date">研修日：</label>
+                <input type="date" id="date" name="date" required>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="form-group">
+                <label for="time">時間：</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">講座名：</label>
+                <input type="text" id="course" name="course" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">感想：</label>
+                <textarea id="feedback" name="feedback" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">送信</button>
+                <button type="button" class="reset-button">リセット</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
