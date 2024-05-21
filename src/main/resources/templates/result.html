@@ -15,13 +15,15 @@
 
         <p>ご入力いただいた内容は以下の通りです。</p>
 
-        <ul>
-            <li>講師名：<span id="lecturer"></span></li>
-            <li>研修日：<span id="date"></span></li>
-            <li>時間：<span id="time"></span></li>
-            <li>講座名：<span id="course"></span></li>
-            <li>感想：<span id="feedback"></span></li>
-        </ul>
+        <div th:object="${form}">
+            <ul>
+                <li>講師名：<span id="lecturer" th:text="*{lecturer}"></span></li>
+                <li>研修日：<span id="date" th:text="*{date}"></span></li>
+                <li>時間：<span id="time" th:text="*{time}"></span></li>
+                <li>講座名：<span id="course" th:text="*{course}"></span></li>
+                <li>感想：<span id="feedback" th:text="*{feedback}"></span></li>
+            </ul>
+        </div>
     </div>
 </body>
 

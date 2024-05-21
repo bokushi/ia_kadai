@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,7 @@
     <div class="container">
         <h1>研修感想フォーム</h1>
 
-        <form th:action="@{/sample3_result}" th:object="${form}" method="post">
+        <form th:action="@{/result}" th:object="${form}" method="post">
             <div class="form-group">
                 <label for="lecturer">講師名：</label>
                 <input type="text" id="lecturer" name=lecturer th:field="*{lecturer}" required>
