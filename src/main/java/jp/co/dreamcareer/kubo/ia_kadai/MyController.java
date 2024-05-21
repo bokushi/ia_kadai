@@ -9,4 +9,10 @@ public class MyController {
     public String getSample() {
         return "index";
     }
+
+    @GetMapping("/result")
+    public String getResult() {
+        return "result";
+    }
+
 }

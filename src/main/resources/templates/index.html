@@ -70,30 +70,30 @@
     <div class="container">
         <h1>研修感想フォーム</h1>
 
-        <form action="#">
+        <form th:action="@{/sample3_result}" th:object="${form}" method="post">
             <div class="form-group">
                 <label for="lecturer">講師名：</label>
-                <input type="text" id="lecturer" name="lecturer" required>
+                <input type="text" id="lecturer" name=lecturer th:field="*{lecturer}" required>
             </div>
 
             <div class="form-group">
                 <label for="date">研修日：</label>
-                <input type="date" id="date" name="date" required>
+                <input type="date" id="date" name=date th:field="*{date}" required>
             </div>
 
             <div class="form-group">
                 <label for="time">時間：</label>
-                <input type="time" id="time" name="time" required>
+                <input type="time" id="time" name=time th:field="*{time}" required>
             </div>
 
             <div class="form-group">
                 <label for="course">講座名：</label>
-                <input type="text" id="course" name="course" required>
+                <input type="text" id="course" name=course th:field="*{course}" required>
             </div>
 
             <div class="form-group">
                 <label for="feedback">感想：</label>
-                <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                <textarea id="feedback" name=feedback th:field="*{feedback}" rows="5" required></textarea>
             </div>
 
             <div class="form-group">
