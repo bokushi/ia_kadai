@@ -1,5 +1,6 @@
 package jp.co.dreamcareer.kubo.ia_kadai;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MyController {
+    @Autowired
+    FormService formService;
+
     @GetMapping("/")
     public String getSample(Model model) {
         model.addAttribute("form", new Forms());
@@ -19,8 +23,11 @@ public class MyController {
     @PostMapping("/result")
     public String getResult(@Validated @ModelAttribute("form") Forms form, BindingResult bindingResult, Model model) {
         model.addAttribute("form", form);
+
         System.out.println(form.getCourse());
         System.out.println(form.getFeedback());
+        formService.saveFormData(
+                new FormData(form.getLecturer(), form.getDate(), form.getTime(), form.getCourse(), form.getFeedback()));
         return "result";
     }
 
