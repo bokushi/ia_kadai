@@ -5,7 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>研修感想フォーム - 結果</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
+        /* 全体 */
+        body {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* コンテナ */
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 見出し */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* 結果表示 */
+        .form {
+            list-style: none;
+            padding: 0;
+        }
+
+        .form li {
+            margin-bottom: 10px;
+        }
+
+        .form li span {
+            font-weight: bold;
+        }
+
+        /* 戻るボタン */
+        a {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -17,7 +75,7 @@
 
         <div th:object="${form}">
             <ul>
-                <li>講師名：<span id="lecturer" th:text="*{lecturer}"></span></li>
+                <li>講師名：<span id="lecturer" th:te xt="*{lecturer}"></span></li>
                 <li>研修日：<span id="date" th:text="*{date}"></span></li>
                 <li>時間：<span id="time" th:text="*{time}"></span></li>
                 <li>講座名：<span id="course" th:text="*{course}"></span></li>

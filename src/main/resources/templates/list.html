@@ -5,6 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>研修生テキスト一覧</title>
+    <style>
+        /* 全体 */
+        body {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* メインコンテンツ */
+        main {
+            padding: 20px;
+        }
+
+        /* 検索ボックス */
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* ソートボックス */
+        .sort-box {
+            margin-bottom: 20px;
+        }
+
+        .sort-box label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .sort-box select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* テキストリスト */
+        .text-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .text-list .text-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-list .text-card h2,
+        .text-list .text-card h3 {
+            margin: 0;
+        }
+
+        .text-list .text-card p {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>

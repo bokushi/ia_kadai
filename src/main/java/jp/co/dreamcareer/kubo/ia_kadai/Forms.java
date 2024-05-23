@@ -8,7 +8,7 @@ public class Forms {
 
     @NotBlank(message = "入力必須です")
     private String date;
-
+        
     @NotBlank(message = "入力必須です")
     private String time;
 
